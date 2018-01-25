@@ -12,19 +12,19 @@ def index():
 	user = {'username': 'Pavel'}
 	posts = [
 		{
-			'autor': {'username': 'Loh'},
+			'author': {'username': 'Loh'},
 			'body': 'Ebat` kolotit`',
 		},
 		{
-			'autor': {'username': 'Petya'},
+			'author': {'username': 'Petya'},
 			'body': 'Nu nihuya sebe'
 		},
 		{
-			'autor': {'username': 'Vasya'},
+			'author': {'username': 'Vasya'},
 			'body': 'Ebushki Vorobushki'
 		}
 	]
-	return render_template('index.html', title='Home', user=user, posts=posts)
+	return render_template('index.html', title='Home', posts=posts)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
