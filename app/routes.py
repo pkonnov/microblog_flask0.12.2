@@ -26,6 +26,8 @@ def index():
 	]
 	return render_template('index.html', title='Home', posts=posts)
 
+
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
 	if current_user.is_authenticated:
@@ -43,10 +45,14 @@ def login():
 		return redirect(next_page)
 	return render_template('login.html', title='Sign In', form=form)
 
+
+
 @app.route('/logout')
 def logout():
 	logout_user()
 	return redirect(url_for('index'))
+
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -61,3 +67,15 @@ def register():
 		flash('Вы успешно прошли регистрацию!')
 		return redirect(url_for('login'))
 	return render_template('register.html', title='Register', form=form)
+
+
+
+@app.route('/user/<username>')
+@login_required
+def user(username):
+	user = User.query.filter_by(username=username).first_or_404()
+	posts = [
+		{'author': user, 'body': 'Test post 1'},
+		{'author': user, 'body': 'Tets post 2'}
+	]
+	return render_template('user.html', user=user, posts=posts)
