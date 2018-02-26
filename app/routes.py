@@ -1,16 +1,27 @@
 from app import app, db
-from app.forms import RegistrationForm, LoginForm, EditProfileForm
+from app.forms import RegistrationForm, LoginForm, EditProfileForm, PostForm
+from app.models import Post
 from flask import render_template, flash, redirect, url_for, request
 from werkzeug.urls import url_parse
 from flask_login import current_user, login_user, logout_user, login_required
 from app.models import User
 from datetime import datetime
 
-@app.route('/')
-@app.route('/index')
+
+
+@app.route('/', methods=['GET', 'POST'])
+@app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
-	user = {'username': 'Pavel'}
+	
+	form = PostForm()
+	if form.validate_on_submit():
+		post = Post(body=form.post.data, author=current_user)
+		db.session.add(post)
+		db.session.commit()
+		flash('Ваш пост скоро появится!')
+		return redirect(url_for('index'))
+
 	posts = [
 		{
 			'author': {'username': 'Loh'},
@@ -25,7 +36,7 @@ def index():
 			'body': 'Ebushki Vorobushki'
 		}
 	]
-	return render_template('index.html', title='Home', posts=posts)
+	return render_template('index.html', title='Home',  form=form, posts=posts)
 
 
 
