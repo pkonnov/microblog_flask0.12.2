@@ -22,21 +22,8 @@ def index():
 		flash('Ваш пост скоро появится!')
 		return redirect(url_for('index'))
 
-	posts = [
-		{
-			'author': {'username': 'Loh'},
-			'body': 'Ebat` kolotit`',
-		},
-		{
-			'author': {'username': 'Petya'},
-			'body': 'Nu nihuya sebe'
-		},
-		{
-			'author': {'username': 'Vasya'},
-			'body': 'Ebushki Vorobushki'
-		}
-	]
-	return render_template('index.html', title='Home',  form=form, posts=posts)
+	posts = current_user.followed_posts().all()
+	return render_template('index.html', title='Home', form=form, posts=posts)
 
 
 
