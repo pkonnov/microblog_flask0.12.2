@@ -1,44 +1,4 @@
-2018-02-26 21:17:48,378 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
-2018-02-26 21:19:39,580 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
-2018-02-26 21:26:36,304 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
-2018-02-26 21:26:50,938 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/routes.py", line 28, in index
-    return render_template('index.html', title='Home', posts=posts)
-  File "/usr/local/lib/python3.5/dist-packages/flask/templating.py", line 134, in render_template
-    context, ctx.app)
-  File "/usr/local/lib/python3.5/dist-packages/flask/templating.py", line 116, in _render
-    rv = template.render(context)
-  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 989, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 754, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python3/dist-packages/jinja2/_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/templates/index.html", line 1, in top-level template code
-    {% extends 'base.html' %}
-  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/templates/base.html", line 35, in top-level template code
-    {% block content %}{% endblock %}
-  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/templates/index.html", line 7, in block "content"
-    {{ form.hidden_tag() }}
-  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 408, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-02-26 21:34:09,250 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1560]
+2018-02-26 21:34:19,741 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -75,7 +35,10 @@ Traceback (most recent call last):
   File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 408, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-02-26 21:34:16,775 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1560]
+2018-02-26 21:35:23,008 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-02-26 21:40:07,944 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-02-27 20:16:41,497 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-02-27 20:16:48,202 ERROR: Exception on / [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -91,24 +54,75 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/routes.py", line 28, in index
-    'body': 'Ebat` kolotit`',
-  File "/usr/local/lib/python3.5/dist-packages/flask/templating.py", line 134, in render_template
-    context, ctx.app)
-  File "/usr/local/lib/python3.5/dist-packages/flask/templating.py", line 116, in _render
-    rv = template.render(context)
-  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 989, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 754, in handle_exception
+  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/routes.py", line 25, in index
+    posts = current_user.followed_posts().all()
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2018-02-28 19:00:58,914 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-02-28 19:01:39,206 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-02-28 19:10:57,857 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-02-28 19:11:02,575 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-02-28 19:11:11,478 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-02-28 19:11:16,480 ERROR: Exception on / [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/interfaces.py", line 503, in _get_strategy
+    return self._strategies[key]
+KeyError: (('lazy', 'dinamic'),)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/usr/lib/python3/dist-packages/jinja2/_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/templates/index.html", line 1, in top-level template code
-    {% extends 'base.html' %}
-  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/templates/base.html", line 35, in top-level template code
-    {% block content %}{% endblock %}
-  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/templates/index.html", line 7, in block "content"
-    {{ form.hidden_tag() }}
-  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 408, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/routes.py", line 85, in before_request
+    if current_user.is_authenticated:
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/usr/local/lib/python3.5/dist-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 335, in _get_user
+    current_app.login_manager._load_user()
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/login_manager.py", line 359, in _load_user
+    return self.reload_user()
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/login_manager.py", line 321, in reload_user
+    user = self.user_callback(user_id)
+  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/models.py", line 70, in load_user
+    return User.query.get(int(id))
+  File "/usr/local/lib/python3.5/dist-packages/flask_sqlalchemy/__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/base.py", line 421, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/base.py", line 400, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/mapper.py", line 1222, in _configure_all
+    configure_mappers()
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/mapper.py", line 2872, in configure_mappers
+    mapper._post_configure_properties()
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/mapper.py", line 1765, in _post_configure_properties
+    prop.init()
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/interfaces.py", line 184, in init
+    self.do_init()
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/relationships.py", line 1659, in do_init
+    super(RelationshipProperty, self).do_init()
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/interfaces.py", line 533, in do_init
+    self.strategy = self._get_strategy(self.strategy_key)
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/interfaces.py", line 505, in _get_strategy
+    cls = self._strategy_lookup(*key)
+  File "/usr/local/lib/python3.5/dist-packages/sqlalchemy/orm/interfaces.py", line 564, in _strategy_lookup
+    raise Exception("can't locate strategy for %s %s" % (cls, key))
+Exception: can't locate strategy for <class 'sqlalchemy.orm.relationships.RelationshipProperty'> (('lazy', 'dinamic'),)
+2018-02-28 19:11:42,732 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-02-28 19:11:48,819 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]

@@ -1,4 +1,4 @@
-2018-02-28 19:11:49,776 ERROR: Exception on / [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1560]
+2018-03-01 20:31:09,190 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -19,88 +19,17 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.5/dist-packages/werkzeug/local.py", line 347, in __getattr__
     return getattr(self._get_current_object(), name)
 AttributeError: 'User' object has no attribute 'followed_posts'
-2018-02-28 19:12:51,722 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/routes.py", line 25, in index
-    posts = current_user.followed_posts().all()
-  File "/usr/local/lib/python3.5/dist-packages/werkzeug/local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'followed_posts'
-2018-02-28 19:13:24,359 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
-2018-02-28 19:13:26,303 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/routes.py", line 25, in index
-    posts = current_user.followed_posts().all()
-  File "/usr/local/lib/python3.5/dist-packages/werkzeug/local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'followed_posts'
-2018-02-28 19:13:28,680 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/routes.py", line 25, in index
-    posts = current_user.followed_posts().all()
-  File "/usr/local/lib/python3.5/dist-packages/werkzeug/local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'followed_posts'
-2018-02-28 19:14:24,905 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/routes.py", line 25, in index
-    # posts = current_user.followed_posts().all()
-  File "/usr/local/lib/python3.5/dist-packages/werkzeug/local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'followed_posts'
+2018-03-05 19:40:01,378 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-05 19:40:06,003 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-05 19:40:13,418 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-10 13:33:19,818 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-10 13:34:24,645 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-10 13:35:00,779 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-10 13:39:15,581 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-10 13:41:27,005 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-10 15:17:02,695 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-10 15:19:21,234 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-10 15:24:00,669 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-10 15:24:22,459 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-10 15:24:30,839 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-10 15:25:00,118 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]

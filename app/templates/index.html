@@ -5,7 +5,8 @@
 	
 	<form action="" method="POST">
 		{{ form.hidden_tag() }}
-		<p>
+		<p>	
+		<div class="form-group">
 			{{ form.post.label }} <br>
 			{{ form.post(cols=32, rows=4) }} <br>
 			{% for error in form.post.errors %}
@@ -13,6 +14,7 @@
 			{% endfor %}
 		</p>
 		<p>{{ form.submit() }}</p>
+		</div>
 	</form>
 
     {% for post in posts %}

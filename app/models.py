@@ -23,7 +23,7 @@ class User(UserMixin, db.Model):
 	followed = db.relationship(
 		'User', secondary=followers,
 		primaryjoin=(followers.c.follower_id == id),
-		secondaryjoin=(followers.c.follower_id == id),
+		secondaryjoin=(followers.c.followed_id == id),
 		backref=db.backref('followers', lazy='dynamic'), lazy='dynamic')
 
 	def __repr__(self):
@@ -37,7 +37,7 @@ class User(UserMixin, db.Model):
 
 	def avatar(self, size):
 		digest = md5(self.email.lower().encode('utf-8')).hexdigest()
-		return 'https://www.gravatar.com/avatar?{}?id=identicon&s={}'.format(
+		return 'https://www.gravatar.com/avatar/{}?id=identicon&s={}'.format(
 			digest, size)
 
 	def follow(self, user):
@@ -50,7 +50,14 @@ class User(UserMixin, db.Model):
 
 	def is_following(self, user):
 		return self.followed.filter(
-			followerd.c.followed_id == user.id).count() > 1
+			followers.c.followed_id == user.id).count() > 0
+
+	def followed_posts(self):
+		followed = Post.query.join(
+			followers, (followers.c.followed_id == Post.user_id)).filter(
+			followers.c.follower_id == self.id)
+		own = Post.query.filter_by(user_id=self.id)
+		return followed.union(own).order_by(Post.timestamp.desc())
 
 
 class Post(db.Model):

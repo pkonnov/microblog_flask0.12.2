@@ -19,12 +19,13 @@
 	</table>
 	<hr>
 	{% for post in posts %}
-	<table>
-		<tr valign="top">
-			<td><img src="{{ post.author.avatar(36) }}" alt=""> </td>
-			<td>{{ post.author.username }} says: <br>{{ post.body }}</td>
-		</tr>
-	</table>
+			<ul class="list-group">
+				<li class="list-group-item">
+				<img src="{{ post.author.avatar(36) }}" alt="">
+				{{ post.author.username }} says: <br>{{ post.body }}
+				</li>
+			</ul>
+
 
 	{% endfor %}
 {% endblock %}
