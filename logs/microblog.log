@@ -33,3 +33,25 @@ AttributeError: 'User' object has no attribute 'followed_posts'
 2018-03-10 15:24:22,459 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
 2018-03-10 15:24:30,839 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
 2018-03-10 15:25:00,118 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-10 15:52:42,464 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-10 15:58:27,646 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
+2018-03-10 15:58:31,564 ERROR: Exception on /unfollow/fabledva/ [GET] [in /usr/local/lib/python3.5/dist-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.5/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/dist-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/routes.py", line 131, in unfollow
+    curren_user.unfollow(user)
+NameError: name 'curren_user' is not defined
+2018-03-10 15:58:58,901 INFO: Microblog startup [in /home/kiril/Desktop/flask2018/microblog_flask0.12.2/app/__init__.py:47]
